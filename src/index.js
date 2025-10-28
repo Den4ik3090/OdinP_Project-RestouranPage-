@@ -1,0 +1,1 @@
+import { greetingUser } from "./script";
