@@ -1,7 +1,30 @@
 h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
+
+p {
+  height: 100px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: #3333331e 1px 1px 2px;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: #44c4f71e 1px 1px 2px;
+  cursor: pointer;
+  border-radius: 0px 0px 10px 10px;
+}
+
+button:hover {
+  background-color: lightgray;
+}
+
 
 ul,
 li {
@@ -25,6 +48,15 @@ header {
   gap: 20px;
 }
 
+.nav__btn button.active {
+  background-color: #f39c12;
+  /* цвет фона для активной кнопки */
+  color: white;
+  /* цвет текста */
+  border: 1px solid #f39c12;
+  /* граница для выделения */
+}
+
 #content {
   margin: 0 auto;
   max-width: 1200px;
@@ -37,4 +69,116 @@ header {
   flex-direction: column;
   margin-top: 50px;
   align-items: center;
+}
+
+/* Изображения  */
+.image-title {
+
+  width: 300px;
+  height: auto;
+
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+/* Меню секция  */
+.menu-section {
+  width: 100%
+}
+
+.menu_content {
+  display: flex;
+  justify-content: center;
+  text-align: ;
+}
+
+.menu__title {
+  display: flex;
+  justify-content: center;
+}
+
+.menu_nav {
+  display: flex;
+  justify-content: center;
+
+}
+
+.menu-nav__ul {
+  display: flex;
+  gap: 50px;
+}
+
+.menu-items {
+  margin-top: 50px;
+  display: flex;
+  gap: 50px;
+  align-items: start;
+  /*   margin-top: 200px; */
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  align-items: center;
+  align-content: center;
+}
+
+#main-course {
+  display: flex;
+  margin-left: 50px;
+  justify-content: end;
+  justify-self: end;
+}
+
+
+.menu-price {
+  font-weight: bolder;
+
+}
+
+.menu-item__img {
+  display: flex;
+
+
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* Секция контакоты */
+.contact-section {
+  display: flex;
+  width: 100%;
+}
+
+.contact_content h2 {
+  font-size: 40px;
+}
+
+.contact_content nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.contact_content nav ul li {
+  margin-top: 20px;
+  font-size: 20px;
+  list-style: none;
+}
+
+.contacts-items {
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+  margin-top: 50px;
 }
