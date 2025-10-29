@@ -13,12 +13,34 @@ p {
   text-shadow: #3333331e 1px 1px 2px;
 }
 
-button {
+#tab-home,
+#tab-contact,
+#tab-menu,
+#tab-info {
+  padding: 10px 20px;
+  border: none;
+  background-color: #fcce03a6;
+  transition: background-color 0.3s;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.menu-price_btn {
+
+  background-color: #b3b2b2a6;
+  transition: background-color 0.3s;
+
+
+}
+
+
+
+
+
+.menu-price_btn {
   font-size: 1rem;
   font-weight: bold;
   text-shadow: #44c4f71e 1px 1px 2px;
   cursor: pointer;
-  border-radius: 0px 0px 10px 10px;
 }
 
 button:hover {
@@ -48,12 +70,16 @@ header {
   gap: 20px;
 }
 
-.nav__btn button.active {
-  background-color: #f39c12;
+.nav__btn button.active,
+#tab-home.active,
+#tab-contact.active,
+#tab-menu.active,
+#tab-info.active {
+  background-color: #1259f38e;
   /* цвет фона для активной кнопки */
   color: white;
   /* цвет текста */
-  border: 1px solid #f39c12;
+  border: 1px solid #86827b;
   /* граница для выделения */
 }
 

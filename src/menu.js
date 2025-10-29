@@ -113,8 +113,9 @@ export default function loadMenu() {
     const p = document.createElement('p');
     p.textContent = dish.desc;
 
-    const price = document.createElement('span');
-    price.classList.add('menu-price');
+    const price = document.createElement('button');
+    price.classList.add('menu-price_btn');
+
     price.textContent = dish.price;
 
     article.appendChild(img);
