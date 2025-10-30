@@ -1,16 +1,16 @@
+/* Импорт изображений для меню */
 import carpaccioImage from './img/steik.png';
 import ribeyeImage from './img/beef.png';
 import cheesecakeImage from './img/desert.png';
 import lemonadeImage from './img/limonade.png';
-
-
-
-
+/* --------------------------------------------------------------------------------------- */
+/* Функция загрузки страницы меню */
 export default function loadMenu() {
   const content = document.getElementById('content');
   content.classList.add('menu_content');
   if (!content) return;
-
+  /* --------------------------------------------------------------------------------------- */
+  /* Наполнени контентом через JS */
   // <section class="menu-section">
   const section = document.createElement('section');
   section.classList.add('menu-section');
@@ -42,14 +42,14 @@ export default function loadMenu() {
     { id: 'drinks', name: 'Напитки' },
   ];
 
-  categories.forEach(cat => {
+  categories.forEach(i => {
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.setAttribute('itemprop', 'url');
-    a.href = `#${cat.id}`;
+    a.href = `#${i.id}`;
     const span = document.createElement('span');
     span.setAttribute('itemprop', 'name');
-    span.textContent = cat.name;
+    span.textContent = i.name;
     a.appendChild(span);
     li.appendChild(a);
     ul.appendChild(li);

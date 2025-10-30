@@ -1,20 +1,31 @@
-/* Импортируем переменные из других файлов  и зависитт от них */
+/* Основной Файл со всеми ссылками  на другие модели  */
+
+/* Импортируем переменные из других файлов  и зависимости  от них */
 import { greetingUser } from "./script.js";
 console.log(greetingUser);
 /* Импортируем стили Сброса CSS */
 import './reset_css.css';
 /* Импортируем основные стили */
 import './style.css';
+
+
+
+
+
 /* Импорт созданных файлов под модули  */
+
+
 
 import loadHome from "./home.js";
 document.addEventListener('DOMContentLoaded', loadHome)
 
-import loadMenu from "./menu.js";
-document.addEventListener('DOMContentLoaded', loadMenu)
+
 
 import loadContacts from "./contact.js";
 document.addEventListener('DOMContentLoaded', loadContacts)
+
+import loadMenu from "./menu.js";
+document.addEventListener('DOMContentLoaded', loadMenu)
 
 import loadHomContent from "./initialLoad.js";
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveButton(document.getElementById('tab-home'));
 });
 
-import rireyeImage from './img/steik.png';
+
 
 
 

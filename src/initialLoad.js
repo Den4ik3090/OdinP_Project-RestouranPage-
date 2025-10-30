@@ -1,9 +1,14 @@
-import './style.css';
+/* --------------------------------------------------------------------------------------- */
+/* Импорт изображения на главной странице */
 import odinImage from './img/odin.png';
+
+/* --------------------------------------------------------------------------------------- */
+/* Функция загрузки начальной страницы */
 export default function loadHomContent() {
   const content = document.getElementById('content');
   if (!content) return;
-
+  /* --------------------------------------------------------------------------------------- */
+  /* Заполнение страницы html  с помощью JS */
   content.innerHTML = '';
 
   const container = document.createElement('div');
@@ -23,9 +28,11 @@ export default function loadHomContent() {
   img.style.maxWidth = '';
   img.style.display = 'block';
 
+  /* Добавление информации на страницу  */
   container.appendChild(title);
   container.appendChild(desc);
   container.appendChild(img);
   content.appendChild(container);
 
 }
+/* --------------------------------------------------------------------------------------- */

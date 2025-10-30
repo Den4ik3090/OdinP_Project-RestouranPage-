@@ -1,8 +1,10 @@
+/* --------------------------------------------------------------------------------------- */
+/* "Создаем функцию загрузки страницы " */
 export default function loadContacts() {
-  const content = document.getElementById('content'); // Замените на реальный id
+  const content = document.getElementById('content');
   content.classList.add('contact_content')
   if (!content) return;
-
+  /* Наполняем страницу контентом с помощью */
   // <section class="contacts-section">
   const section = document.createElement('section');
   section.classList.add('contacts-section');
@@ -63,12 +65,13 @@ export default function loadContacts() {
     itemsDiv.appendChild(article);
   });
 
-  // Сборка структуры
-  container.appendChild(heading);
+  // Сборка структуры последовательность !
+  content.appendChild(section);
+  section.appendChild(heading);
+  section.appendChild(container);
+
   container.appendChild(nav);
   container.appendChild(itemsDiv);
 
-  section.appendChild(container);
 
-  content.appendChild(section);
 }

@@ -11,7 +11,9 @@ p {
   margin-bottom: 15px;
   font-family: 'Times New Roman', Times, serif;
   text-shadow: #3333331e 1px 1px 2px;
+  text-align: center;
 }
+
 
 #tab-home,
 #tab-contact,
@@ -28,8 +30,6 @@ p {
 
   background-color: #b3b2b2a6;
   transition: background-color 0.3s;
-
-
 }
 
 
@@ -84,8 +84,7 @@ header {
 }
 
 #content {
-  margin: 0 auto;
-  max-width: 1200px;
+  margin: 0;
   padding: 20px;
   text-align: center;
 }
@@ -140,28 +139,36 @@ header {
 }
 
 .menu-items {
-  margin-top: 50px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 50px;
-  align-items: start;
-  /*   margin-top: 200px; */
 }
 
 .menu-item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 300px;
+  justify-content: center;
   align-items: center;
+  width: 300px;
   align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  /* Позволяет элементам переноситься на новую строку при нехватке места */
+  align-items: center;
+  /* Выравнивание по центру по вертикали */
+  margin-top: 50px;
 }
 
-#main-course {
-  display: flex;
-  margin-left: 50px;
-  justify-content: end;
-  justify-self: end;
+.menu-item__img {
+  width: 200px;
+  /* Фиксированный размер изображения */
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
+  /* Изображение не сжимается */
 }
+
 
 
 .menu-price {
@@ -207,4 +214,49 @@ header {
   gap: 100px;
   justify-content: space-between;
   margin-top: 50px;
+}
+
+/* =============================== */
+/* 1. БАЗОВЫЕ СТИЛИ (MOBILE FIRST) */
+/* =============================== */
+
+/* Стили по умолчанию применяются ко всем устройствам, включая мобильные */
+.menu-items {
+  /* На мобильном: 1 колонка */
+  grid-template-columns: 1fr;
+}
+
+/* На мобильном: изображение переносится выше текста, так как нет места в ряд */
+.menu-item {
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-item__img {
+  margin-bottom: 10px;
+}
+
+
+/* =============================== */
+/* 2. MEDIA QUERY ДЛЯ ПЛАНШЕТОВ (С 768px) */
+/* =============================== */
+@media (min-width: 768px) {
+
+  /* На планшетах: возвращаем отображение Flexbox в ряд */
+  .menu-item {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+
+/* =============================== */
+/* 3. MEDIA QUERY ДЛЯ ДЕКСТОПОВ (С 1024px) */
+/* =============================== */
+@media (min-width: 1024px) {
+
+  /* На десктопах: делаем 2 колонки для списка блюд */
+  .menu-items {
+    grid-template-columns: 1fr 1fr;
+  }
 }
