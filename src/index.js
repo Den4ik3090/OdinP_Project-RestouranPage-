@@ -11,10 +11,9 @@ import './style.css';
 
 
 
+/* --------------------------------------------------------------------------------------- */
 
 /* Импорт созданных файлов под модули  */
-
-
 
 import loadHome from "./home.js";
 document.addEventListener('DOMContentLoaded', loadHome)
@@ -33,17 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveButton(document.getElementById('tab-home'));
 });
 
-
-
-
-
-
+/* --------------------------------------------------------------------------------------- */
 
 /* Создаем переменные для кнопок для переключения */
 
 const homeBtn = document.getElementById('tab-home');
 const menuBtn = document.getElementById('tab-menu');
 const contactBtn = document.getElementById('tab-contact');
+
+/* --------------------------------------------------------------------------------------- */
 
 /* Обработчики событий для каждой кнопки   */
 homeBtn.addEventListener('click', (e) => {
